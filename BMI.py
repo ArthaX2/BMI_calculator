@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from ttkbootstrap import Style
 
 def calculate_bmi():
     try:
@@ -15,13 +16,7 @@ window.title("BMI Calculator")
 window.geometry("400x300")
 window.configure(bg="#f8f9fa")
 
-style = ttk.Style()
-style.theme_use('clam')
-
-style.configure("TFrame", background="#f8f9fa")
-style.configure("TLabel", background="#f8f9fa", font=("Helvetica", 12))
-style.configure("TButton", background="#007bff", foreground="white", font=("Helvetica", 12))
-style.map("TButton", background=[("active", "#0056b3")])
+style = Style(theme='darkly')  # Change the theme as desired
 
 title_label = ttk.Label(window, text="BMI Calculator", font=("Helvetica", 16, "bold"))
 title_label.pack(pady=10)
